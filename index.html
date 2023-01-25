@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  
+  <body>
+    <a href="./highscore.html" id="highscore-btn" class="highscore-btn">High scores</a>
+    <main class="container">
+      <div id="home" class="flex-column flex-center">
+        <h1>Code Quiz!</h1>
+        <button id="start-button" class="play-btn">Play</button>
+          <section class = "questions"></section>
+          <section class = "answers">
+            <button type="button" id = "answer1"></button>
+            <br>
+            <button type="button" id = "answer2"></button>
+            <br>
+            <button type="button" id = "answer3"></button>
+            <br>
+            <button type="button" id = "answer4"></button>
+          </section>
+          <div id="score"></div>
+          <input type="text" id="initials-input" style="display: none;"></input>
+          <button id="save-score-button" style="display: none;">Save</button>
+      </div>
+    </main>
+
+    <script src="./assets/game.js"></script>
+  </body>
+</html>

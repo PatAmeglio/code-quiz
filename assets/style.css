@@ -1,0 +1,81 @@
+body {
+  background-color: lightgreen;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-family: 'nova square', cursive;
+}
+
+h1 {
+  font-size: 100px;
+  margin-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn {
+  font-size: 40px;
+  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 15px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background: linear-gradient(90deg, rgb(255,182,193) 0%, rgb(255,182,193) 100%);
+  border-radius: 100px;
+}
+
+.play-btn:hover {
+  background:linear-gradient(90deg, rgb(0,255,255) 0%,rgb(0,255,255) 100%);
+  cursor: pointer;
+  box-shadow: 100px;
+  transition: 150ms;
+  transform: scale(1.03);
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(255,255,204) 0%, rgb(255,255,204) 100%);
+    font-size: 40px;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border-radius: 100px;
+}
+
+#highscore-btn:hover {
+  background:linear-gradient(90deg, rgb(0,255,255) 0%,rgb(0,255,255) 100%);
+  cursor: pointer;
+  box-shadow: 100px;
+  transition: 150ms;
+  transform: scale(1.03);
+}
+
+.questions {
+  margin: 50px;
+  margin-bottom: 75px;
+}
