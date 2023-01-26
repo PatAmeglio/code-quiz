@@ -10,21 +10,28 @@
   
   <body>
     <a href="./highscore.html" id="highscore-btn" class="highscore-btn">High scores</a>
+    
     <main class="container">
-      <div id="home" class="flex-column flex-center">
+      <div class="flex-column flex-center">
+
         <h1>Code Quiz!</h1>
-        <button id="start-button" class="play-btn">Play</button>
+
+        <button id="start-button" class="play-btn">Start</button>
+
+          <p id = "result"></p>
           <section class = "questions"></section>
           <section class = "answers">
-            <button type="button" id = "answer1"></button>
+            <button type="button" id="answer1" onclick="checkAnswer(questions[currentQuestion].choices[0])"></button>
             <br>
-            <button type="button" id = "answer2"></button>
+            <button type="button" id="answer1" onclick="checkAnswer(questions[currentQuestion].choices[1])"></button>
             <br>
-            <button type="button" id = "answer3"></button>
+            <button type="button" id="answer1" onclick="checkAnswer(questions[currentQuestion].choices[2])"></button>
             <br>
-            <button type="button" id = "answer4"></button>
+            <button type="button" id="answer1" onclick="checkAnswer(questions[currentQuestion].choices[3])"></button>
           </section>
+
           <div id="score"></div>
+
           <input type="text" id="initials-input" style="display: none;"></input>
           <button id="save-score-button" style="display: none;">Save</button>
       </div>

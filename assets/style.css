@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'nova square', cursive;
 }
 
@@ -79,3 +79,24 @@ h1 {
   margin: 50px;
   margin-bottom: 75px;
 }
+
+.return-to-quiz {
+    background: linear-gradient(90deg, rgb(255,255,204) 0%, rgb(255,255,204) 100%);
+    font-size: 40px;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border-radius: 100px;
+}
+
+.return-to-quiz:hover {
+  background:linear-gradient(90deg, rgb(0,255,255) 0%,rgb(0,255,255) 100%);
+  cursor: pointer;
+  box-shadow: 100px;
+  transition: 150ms;
+}
+
