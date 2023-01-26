@@ -110,6 +110,7 @@ function checkAnswer(event) {
 }
 
 function endGame(event) {
+  timerContainer.style.display = "none";
   questionsContainer.style.display = "none";
   answersContainer.forEach(button => button.style.display = "none");
   scoreContainer.style.display = "block";
