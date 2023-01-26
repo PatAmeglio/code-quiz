@@ -5,6 +5,7 @@ const scoreContainer = document.querySelector("#score");
 const initialsInput = document.querySelector("#initials-input");
 const saveScoreButton = document.querySelector("#save-score-button");
 const result = document.querySelector("#result");
+const timerContainer = document.querySelector("#timer");
 
 let timer = 60;
 let score = 0;
@@ -64,12 +65,13 @@ function startGame() {
   scoreContainer.style.display = "block";
   setTimer();
   displayQuestion();
+  scoreContainer.textContent = "Score:" + score;
 }
 
 function setTimer() {
   const timerInterval = setInterval(() => {
     timer--;
-    scoreContainer.textContent = `Timer: ${timer}`;
+    timerContainer.textContent = `Timer: ${timer}`;
     if (timer <= 0) {
       clearInterval(timerInterval);
       endGame();
@@ -86,32 +88,34 @@ function displayQuestion() {
 }
 
 function checkAnswer(event) {
-  const selectedButton = event.target;
-  const correctAnswer = questions[currentQuestionIndex].correctAnswer;
-  if (selectedButton.dataset.answer === correctAnswer) {
-    score++;
-    result.textContent ="Correct!";
-  } 
-  else {
+  if (event.target.textContent == questions[currentQuestionIndex].correctAnswer) {
+    score++ ;
+    scoreContainer.textContent = "Score:" + score;
+    result.textContent = "Correct!";
+    result.style.color = "green";
+  } else {
     timer -= 10;
-    result.textContent ="Incorrect!";
+    result.textContent = "Incorrect!";
+    result.style.color = "red";
   }
+  setTimeout(() => {
+    result.textContent = "";
+  }, 1000);
   currentQuestionIndex++;
   if (currentQuestionIndex === questions.length) {
     endGame();
   } else {
     displayQuestion();
-    result.textContent();
   }
 }
 
-function endGame() {
+function endGame(event) {
   questionsContainer.style.display = "none";
   answersContainer.forEach(button => button.style.display = "none");
-  scoreContainer.style.display = "none";
+  scoreContainer.style.display = "block";
   initialsInput.style.display = "block";
   saveScoreButton.style.display = "block";
-  alert("Game Over! Your score is " + score);
+  scoreContainer.textContent = "Game Over! Your score is " + score;
 }
 
 function saveScore() {
@@ -121,4 +125,3 @@ function saveScore() {
   localStorage.setItem("highscores", JSON.stringify(highscores));
   window.location.href = "./highscore.html";
 }
-

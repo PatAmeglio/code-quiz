@@ -18,7 +18,9 @@
 
         <button id="start-button" class="play-btn">Start</button>
 
-          <p id = "result"></p>
+          <p id ="result"></p>
+          <p id ="score"></p>
+          <p id ="timer"></p>
           <section class = "questions"></section>
           <section class = "answers">
             <button type="button" id="answer1" onclick="checkAnswer(questions[currentQuestion].choices[0])"></button>
@@ -29,8 +31,6 @@
             <br>
             <button type="button" id="answer1" onclick="checkAnswer(questions[currentQuestion].choices[3])"></button>
           </section>
-
-          <div id="score"></div>
 
           <input type="text" id="initials-input" style="display: none;"></input>
           <button id="save-score-button" style="display: none;">Save</button>
